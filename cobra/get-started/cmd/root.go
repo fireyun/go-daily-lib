@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"errors"
-
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +11,7 @@ var rootCmd = &cobra.Command {
 designed to handle everything from small to very large projects 
 with speed and efficiency.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Error(cmd, args, errors.New("unrecognized command"))
+		_ = cmd.Help()
 	},
 }
 

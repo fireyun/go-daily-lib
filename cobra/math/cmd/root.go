@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"errors"
-
 	"github.com/spf13/cobra"
 )
 
@@ -32,8 +30,9 @@ var (
 var rootCmd = &cobra.Command {
 	Use: "math",
 	Short: "Math calc the accumulative result.",
+	Long: "a long description: for the root cmd math, used to calc",
 	Run: func(cmd *cobra.Command, args []string) {
-		Error(cmd, args, errors.New("unrecognized subcommand"))
+		_ = cmd.Help()
 	},
 }
 
